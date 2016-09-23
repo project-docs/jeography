@@ -3,10 +3,36 @@ $:markdown
 
 Jeography is Java GIS toolkit with a focus on
 [OpenStreetMap](http://www.openstreetmap.org) data.
+The main GUI is for browsing the map and performing some geo data related
+tasks.
 
 $:/
 
 $:image(src="images/Jeography.png");
 
 $:markdown
+
+## Development
+
+Development of Jeography happens at GitHub.
+It is organized in the following repositories:
+[jeography-core](https://github.com/topobyte/jeography-core),
+[jeography-gis](https://github.com/topobyte/jeography-gis).
+
+## Running
+
+To run the latest version, check out the source code:
+
+    git clone https://github.com/topobyte/jeography-gis
+
+and then run using gradle:
+
+    gradle run
+
+to make it available for launchers, first build the project:
+
+    gradle createRuntime
+
+and then run the script located at `scripts/jeography`.
+
 $:/
