@@ -35,4 +35,16 @@ to make it available for launchers, first build the project:
 
 and then run the script located at `scripts/jeography`.
 
+## Using the search option
+
+To use the search option, you need a database.
+We provide prebuilt database files here:
+
+* [places without villages](http://osmdata.topobyte.de/by-date/latest/places-novillages.sqlite) (ca. 25Mb)
+* [places including villages](http://osmdata.topobyte.de/by-date/latest/places.sqlite) (ca. 190Mb)
+
+Download one of the files to your computer and then in Jeography, navigate to
+`File` → `Settings` → `General`
+and specifiy the location where you stored the database in the `database` field.
+
 $:/
