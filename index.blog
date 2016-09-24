@@ -35,7 +35,18 @@ to make it available for launchers, first build the project:
 
 and then run the script located at `scripts/jeography`.
 
-## Using the search option
+## Using the offline search option
+
+Jeography features an offline search option for places.
+You can open the search dialog through the menu
+`Map` → `Search` or by pressing `Ctrl + F`.
+
+$:/
+
+$:image(src="images/Search.png");
+
+$:markdown
+
 
 To use the search option, you need a database.
 We provide prebuilt database files here:
@@ -46,5 +57,23 @@ We provide prebuilt database files here:
 Download one of the files to your computer and then in Jeography, navigate to
 `File` → `Settings` → `General`
 and specifiy the location where you stored the database in the `database` field.
+You need to restart the application for this change to take effect.
+
+You can also create your own database with the script located at
+`scripts/create-place-database`. Here's the usage message:
+
+    usage: CreatePlaceDatabase [args]
+        --input <arg>          the input file
+        --input-format <arg>   the file format of the input
+        --langs <arg>          languages to use (default value: en, de)
+        --output <arg>         database output file
+        --types <arg>          place types to use (default value: country,
+                               state, county, city, town, village, region,
+                               island)
+
+For example you can call the script like this to create a database that includes native names and both English and French names of places
+for all countries, cities and islands from an OpenStreetMap data file:
+
+    scripts/create-place-database --input /tmp/places.pbf --input-format pbf -output database.sqlite --langs en,fr --types country,city,island
 
 $:/
