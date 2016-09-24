@@ -76,4 +76,20 @@ for all countries, cities and islands from an OpenStreetMap data file:
 
     scripts/create-place-database --input /tmp/places.pbf --input-format pbf -output database.sqlite --langs en,fr --types country,city,island
 
+## Using the Goto feature
+
+There's also a 'Go To' dialog to navigate to coordinates quickly.
+You can open the that dialog through the menu
+`Map` → `Go to` or by pressing `Ctrl + G`.
+
+$:/
+
+$:image(src="images/Goto.png");
+
+$:markdown
+
+You can paste text in different formats there. Jeography will parse it, translate it to
+coordinates and allows you to jump to the specified location by pressing `Enter` or clicking
+the `Go` button.
+
 $:/
